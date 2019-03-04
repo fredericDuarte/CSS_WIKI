@@ -1,0 +1,178 @@
+/**************** page **************/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cinzel Decorative', cursive;
+  background-color: #FBF8FB;
+  font-family: 'Asap', sans-serif;
+  color: #292728;
+  min-width: 600px;
+}
+
+/************ header *******************/
+
+@media (max-width: 639px) {
+  .header {
+    flex-flow: column-reverse wrap;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-flow: row wrap;
+    align-items: center;
+  }
+}
+
+.header {
+  border-bottom: 1px solid #EFEFEE;
+  color: #9E999C;
+  display: flex;
+  background-color: white;
+}
+
+.header img {
+  width: 50px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+
+.logo {
+  padding: 20px 40px;
+  align-items: center;
+  flex: auto;
+  display: flex;
+}
+
+.avatar {
+  padding: 20px 40px;
+  border-left: 1px solid #EFEFEE;
+  align-items: center;
+  display: flex;
+}
+
+.notif {
+  position: relative;
+}
+
+.notif::after {
+  content: "3";
+  position: absolute;
+  background-color: #026AD1;
+  color: white;
+  border-radius: 50%;
+  right: 0;
+  bottom: -8px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deplie {
+  height: 0px;
+  background-color: white;
+  transition: height 2s;
+  position: absolute;
+  top: 95px;
+  left: 625px;
+  right: 0px;
+  text-align: center;
+  border-left: 1px solid #EFEFEE;
+  border-right: 1px solid #EFEFEE;
+  border-bottom: 1px solid #EFEFEE;
+  overflow: hidden;
+}
+
+.notif:hover~.deplie {
+  height: 25px;
+}
+
+/*************** contenu **************/
+
+@media (max-width: 639px) {
+  .container {
+    text-align: center;
+  }
+}
+
+.container {
+  max-width: 800px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.title {
+  font-size: 40px;
+  margin: 40px;
+  font-weight: normal;
+}
+
+.container>p {
+  color: #B4B4B4;
+  font-size: 20px;
+  margin: 40px;
+}
+
+/********* carte ****************/
+
+@media (max-width: 639px) {
+  .carte {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
+
+@media (min-width: 640px) {
+  .carte {
+    flex-flow: row wrap;
+  }
+}
+
+.carte {
+  border: 1px solid #EFEFEE;
+  padding: 20px 40px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  margin: 0px 40px;
+  margin-top: 20px;
+}
+
+.icon {
+  border-radius: 50%;
+  background-color: #E5EFF5;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex: none;
+  align-items: center;
+}
+
+.icon--odd {
+  background-color: #FEE0DF;
+}
+
+.icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.description {
+  padding-left: 20px;
+}
+
+.description>span {
+  font-size: 32px;
+}
+
+.description>p {
+  color: #B4B4B4;
+  margin-top: 8px;
+}
